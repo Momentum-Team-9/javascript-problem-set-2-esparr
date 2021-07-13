@@ -2,6 +2,15 @@
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
+function remove(names, removedName) {
+    const idx = names.indexOf(removedName);
+    for (let i = 0; i < names.length; i++) {
+        if (i === idx) {
+           names.splice(idx, 1);
+        }
+    }
+    return names
+}
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
